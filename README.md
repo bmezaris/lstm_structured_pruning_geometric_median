@@ -8,7 +8,7 @@ In contrast to structured DCNN pruning, which has been extensively studied in th
 However, both [5, 6] utilize sparsity-inducing regularizers to modify the loss function, which may lead to numerical instabilities and suboptimal solutions [7].
 Inspired from recent advances in DCNN filter pruning [2, 3] we extend [5] as following:
 1) The covariance matrix formed by layer’s responses is used to compute the respective eigenvalues, quantify layer’s redundancy and pruning rate (as in [2] for DCNN layers).
-2) A Geometric Median-based (GM-based) criterion is used to identify the most redundant LSTM units (as in [3] for DCNN filters).
+2) A Geometric Median-based criterion is used to identify the most redundant LSTM units (as in [3] for DCNN filters).
 
 ## Dependencies
 
@@ -20,7 +20,7 @@ Download the YouTube-8M dataset (frame-level features) into the dbs folder.
 
 The code is provided for academic, non-commercial use only.
 Please also check for any restrictions applied in the code parts used here from other sources (e.g. provided datasets, YouTube-8M Tensorflow Starter Code, etc.).
-If you find the our code useful in your work, please cite the following publication where this approach is described:
+If you find the code useful in your work, please cite the following publication where this approach is described:
 
 Bibtex:
 ```
