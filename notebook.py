@@ -33,15 +33,15 @@ from model.mymodels import MyLstm as BlstmMdl
 
 FLAGS = flags.FLAGS
 
-flags.DEFINE_string("DBNM", r'.\dbs',"The directory where tfrecord files are.")
+flags.DEFINE_string("DBNM", r'.\dbs',"The directory where tfrecord files are placed.")
 flags.DEFINE_string("train_data_pattern_glob", r'yt8m\tfrecords\frame\train\train*.tfrecord',
                     "File glob for the training dataset; relevant path to DBNM.")
 flags.DEFINE_string("eval_data_pattern_glob", r'yt8m\tfrecords\frame\validate\validate*.tfrecord',
                     "File glob for the validation dataset; relevant path to DBNM.")
 flags.DEFINE_bool("shuffle_data", True, "Shuffle the data on read.")
 flags.DEFINE_integer("num_parallel_calls", 4, "Number of threads to use in map function when processing the dataset.")
-flags.DEFINE_integer("num_classes", 3862, "Number of threads to use in map function when processing the dataset.") # 3862
-flags.DEFINE_integer("num_train_observations", 3888919, "Number of training observations.") # 3888919, 41393
+flags.DEFINE_integer("num_classes", 3862, "Number of threads to use in map function when processing the dataset.")
+flags.DEFINE_integer("num_train_observations", 3888919, "Number of training observations.")
 flags.DEFINE_integer("top_k", 20, "How many predictions to output per video.")
 
 # Model flags.
@@ -56,7 +56,7 @@ flags.DEFINE_integer("fea_vec_dim", 1152, "Feature vector dimensionality.")
 flags.DEFINE_float("regularization_penalty", 1e-3, "How much weight to give to the regularization loss (the label loss has a weight of 1).")
 flags.DEFINE_float("base_learning_rate", 0.0002, "Which learning rate to start with.")
 flags.DEFINE_float("learning_rate_decay", 0.95, "Learning rate decay factor to be applied every learning_rate_decay_examples.")
-flags.DEFINE_float("learning_rate_decay_examples", 4000000, "Multiply current learning rate by learning_rate_decay every learning_rate_decay_examples.") # 3888919 4000000
+flags.DEFINE_float("learning_rate_decay_examples", 4000000, "Multiply current learning rate by learning_rate_decay every learning_rate_decay_examples.")
 flags.DEFINE_integer("num_epochs", 20, "How many passes to make over the dataset before halting training.")
 flags.DEFINE_float("step_prune", 200, "Number of steps to prune the network.")
 flags.DEFINE_float("epoch_prune", 0, "Epoch to start pruning procedure.")
@@ -80,8 +80,7 @@ def main(unused_argv):
     train_data_pattern = os.path.join(FLAGS.DBNM, FLAGS.train_data_pattern_glob) # absolute file glob for the dataset
     eval_data_pattern = os.path.join(FLAGS.DBNM, FLAGS.eval_data_pattern_glob) # absolute file glob for the validation dataset
 
-    shuffle_buffer_size = FLAGS.batch_size *2 # 5
-    # tfrecordFilesTrn = tf.data.Dataset.list_files(file_pattern=FLAGS.train_input_data_pattern_glob, shuffle=False)
+    shuffle_buffer_size = FLAGS.batch_size *2
     tfrecordFnamesTrn = tf.io.gfile.glob(train_data_pattern)
     DstTrn = tf.data.TFRecordDataset(tfrecordFnamesTrn)  # create dataset object for this tfrecord file
     DstTrn = DstTrn.map(map_func=parse_yt8m_tfrecs_seq_ex_func, num_parallel_calls=FLAGS.num_parallel_calls)
