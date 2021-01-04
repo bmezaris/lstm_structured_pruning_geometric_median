@@ -330,8 +330,8 @@ def main(unused_argv):
                     elif prune_rate_diff < 0: # prune rate is large; keep less energy rate to increase pruning rate towards the target one
                         FLAGS.keep_energy_rate = FLAGS.keep_energy_rate + prune_rate_diff * (FLAGS.keep_energy_rate / 4.)
 
-                    print('Tune step: {}; Keep energy rate: {}; keeping cells: l1: {}, l2: {}, l3: {}'.format(stepprntune, FLAGS.keep_energy_rate, keep_cells_l1, keep_cells_l2, keep_cells_l3))
-                    print('Tune step: {}; Keep energy rate: {}; Suggested pruning rates: total: {}, l1: {}, l2: {}, l3: {}'.format(stepprntune, FLAGS.keep_energy_rate, suggested_total_prune_rate, suggested_prune_rate_l1, suggested_prune_rate_l2, suggested_prune_rate_l3))
+                    #print('Tune step: {}; Keep energy rate: {}; keeping cells: l1: {}, l2: {}, l3: {}'.format(stepprntune, FLAGS.keep_energy_rate, keep_cells_l1, keep_cells_l2, keep_cells_l3))
+                    #print('Tune step: {}; Keep energy rate: {}; Suggested pruning rates: total: {}, l1: {}, l2: {}, l3: {}'.format(stepprntune, FLAGS.keep_energy_rate, suggested_total_prune_rate, suggested_prune_rate_l1, suggested_prune_rate_l2, suggested_prune_rate_l3))
                     stepprntune = stepprntune +1
 
                 # many eigenvlues may be zero, i.e., small redudancy in the layers; then we need to enforce larger pruning rates
