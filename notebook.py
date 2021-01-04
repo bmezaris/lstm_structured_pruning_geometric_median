@@ -1,9 +1,10 @@
 """"
 Implementation in Tensorflow of the BLSTM structured pruning method
 using the YouTube8M dataset, as described in the paper:
-N. Gkalelis and V. Mezaris, “Fractional step discriminant pruning:
-A filter pruning framework for deep convolutional neural networks,”
-in IEEE ICMEW, London, UK, Jul. 2020, pp. 1–6.
+N. Gkalelis, V. Mezaris, "Structured Pruning of LSTMs via
+Eigenanalysis and Geometric Median for Mobile Multimedia
+and Deep Learning Applications", Proc. 22nd IEEE Int.
+Symposium on Multimedia (ISM), Dec. 2020.
 History
 -------
 DATE      | DESCRIPTION    | NAME              | Organization |
