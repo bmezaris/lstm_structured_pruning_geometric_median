@@ -24,7 +24,7 @@ If you find the code useful in your work, please cite the following publication 
 
 Bibtex:
 ```
-@INPROCEEDINGS{FSDP_ICMEW2020,
+@INPROCEEDINGS{ISSGM_ISM2020,
                AUTHOR    = "N. Gkalelis and V. Mezaris",
                TITLE     = "Structured Pruning of LSTMs via Eigenanalysis and Geometric Median for Mobile Multimedia and Deep Learning Applications",
                BOOKTITLE = "Proc. IEEE Int. Symposium on Multimedia (ISM)",
