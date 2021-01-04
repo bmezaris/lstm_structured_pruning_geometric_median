@@ -268,7 +268,7 @@ def main(unused_argv):
         t1 = 0.  # model pruning time
         steptrn = 1
         num_samples = 300
-        for viddata in DstTrn: # fea_rgb, fea_audio, labels, vidid
+        for viddata in DstTrn:
             #vidid = viddata["video_ids"]
             feaSeq = viddata["video_matrix"]
             labels = viddata["labels"]
