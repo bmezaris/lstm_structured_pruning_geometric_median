@@ -1,4 +1,4 @@
-## LSTM Structured Pruning via Eigenanalysis and Geometric Median
+## Structured Pruning of LSTMs via Eigenanalysis and Geometric Median
 
 This repository contains the code for the paper “Structured Pruning of LSTMs via Eigenanalysis and Geometric Median for Mobile Multimedia and Deep Learning Applications” (Proc. 22nd IEEE Int. Symposium on Multimedia (ISM), Dec. 2020).
 
