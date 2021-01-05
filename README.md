@@ -14,7 +14,7 @@ Inspired from recent advances in DCNN filter pruning [2, 3] we extend [5] as fol
 
 To run the code use TensorFlow 2.3 or later.
 
-Download the YouTube-8M dataset (frame-level features) into the dbs folder.
+Download the YouTube-8M dataset (frame-level features) into the dbs folder [Link](http://research.google.com/youtube8m/download.html).
 
 ## License and Citation
 
