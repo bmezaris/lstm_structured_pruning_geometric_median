@@ -7,7 +7,7 @@ This repository contains the code for the paper “Structured Pruning of LSTMs v
 In contrast to structured DCNN pruning, which has been extensively studied in the literature [1, 2, 3, 4], structured RNN pruning is a much less investigated topic [5, 6].
 However, both [5, 6] utilize sparsity-inducing regularizers to modify the loss function, which may lead to numerical instabilities and suboptimal solutions [7].
 Inspired from recent advances in DCNN filter pruning [2, 3] we extend [5] as following:
-1) The covariance matrix formed by layer’s responses is used to compute the respective eigenvalues, quantify layer’s redundancy and pruning rate (as in [2] for DCNN layers).
+1) The covariance matrix formed by each layer’s responses is used to compute the respective eigenvalues, quantify the layer’s redundancy and pruning rate (as in [2] for DCNN layers).
 2) A Geometric Median-based criterion is used to identify the most redundant LSTM units (as in [3] for DCNN filters).
 
 ## Dependencies
