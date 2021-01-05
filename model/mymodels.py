@@ -16,7 +16,6 @@ import tensorflow as tf
 
 class MyLstm(tf.keras.Model):
     def __init__(self, num_classes,
-                 moe_l2=0.005,
                  weight_decay = 0.005,
                  sequence_length = 300,
                  lstm_size = 1024,
