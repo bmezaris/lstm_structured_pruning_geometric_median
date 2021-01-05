@@ -38,7 +38,7 @@ Bibtex:
 
 ## Acknowledgements
 
-This work was supported by the EUs Horizon 2020 research and innovation programme under grant agreement H2020-780656 ReTV.
+This work was supported by the EU Horizon 2020 research and innovation programme under grant agreement H2020-780656 ReTV.
 
 ## References
 
