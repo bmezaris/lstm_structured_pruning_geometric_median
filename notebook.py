@@ -40,7 +40,7 @@ flags.DEFINE_string("eval_data_pattern_glob", r'yt8m\tfrecords\frame\validate\va
                     "File glob for the validation dataset; relevant path to DBNM.")
 flags.DEFINE_bool("shuffle_data", True, "Shuffle the data on read.")
 flags.DEFINE_integer("num_parallel_calls", 4, "Number of threads to use in map function when processing the dataset.")
-flags.DEFINE_integer("num_classes", 3862, "Number of threads to use in map function when processing the dataset.")
+flags.DEFINE_integer("num_classes", 3862, "Number of classes.")
 flags.DEFINE_integer("num_train_observations", 3888919, "Number of training observations.")
 flags.DEFINE_integer("top_k", 20, "How many predictions to output per video.")
 
