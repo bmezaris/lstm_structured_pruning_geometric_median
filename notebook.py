@@ -61,9 +61,9 @@ flags.DEFINE_integer("num_epochs", 20, "How many passes to make over the dataset
 flags.DEFINE_float("step_prune", 200, "Number of steps to prune the network.")
 flags.DEFINE_float("epoch_prune", 0, "Epoch to start pruning procedure.")
 flags.DEFINE_float("keep_energy_rate", 0.9, "keep rate for energy preservation.")
-flags.DEFINE_float("prune_rate_l1", 0.3, "prune rate for 1st lstm.")
-flags.DEFINE_float("prune_rate_l2", 0.3, "prune rate for 2nd lstm.")
-flags.DEFINE_float("prune_rate_l3", 0.3, "prune rate for 3rd lstm.")
+flags.DEFINE_float("prune_rate_l1", 0.3, "prune rate for forward branch of 1st lstm layer.")
+flags.DEFINE_float("prune_rate_l2", 0.3, "prune rate for backward branch of 1st lstm layer.")
+flags.DEFINE_float("prune_rate_l3", 0.3, "prune rate for 2nd lstm layer.")
 
 def main(unused_argv):
     DBNM = FLAGS.DBNM
